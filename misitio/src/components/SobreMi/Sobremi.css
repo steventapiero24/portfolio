@@ -1,0 +1,53 @@
+.sobremi {
+    position: relative;
+    z-index: 200;
+    height: 80vh;
+    margin-top: 25vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../../assets/fondodos.png);
+}
+
+.sobremi__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    padding: 40px 130px;
+    opacity: 1;
+}
+.sobremi__container-info {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    gap: 80px;
+}
+.sobremi__container-title {
+    display: flex;
+    align-items: center;
+    height: 15%;
+}
+.sobremi__container-title h2 {
+    font-size: 64px;
+    color: var(--color-segundario);
+}
+.sobremi__container-info-description {
+    flex: 1;
+    font-size: 32px;
+}
+.sobremi__container-info-description p {
+    font-weight: 100;
+}
+.sobremi__container-info-image {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+.sobremi__container-info-image img {
+    width: 50%;
+    transform: translateY(40px);
+}

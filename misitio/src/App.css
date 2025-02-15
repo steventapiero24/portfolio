@@ -1,0 +1,80 @@
+:root {
+    --color-principal: #FB3516;
+    --color-segundario: #011F50;
+    --color-texto:#111111;
+    --color-amarillo:#FFE5B6;
+    --color-amarilo-rgba: #f8998a;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    scroll-behavior: auto;
+}
+
+/* Estilo para la barra de desplazamiento */
+::-webkit-scrollbar {
+    width: 10px; 
+    height: 12px; 
+  }
+  ::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+    width: 10px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--color-amarilo-rgba);
+    border-radius: 10px;
+    width: 10px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color-principal);
+  }
+  ::-webkit-scrollbar-horizontal {
+    height: 12px;
+  }
+  
+/* Estilos botones */
+button {
+    font-family: "Oswald", serif !important;
+    padding: 5px 18px !important;
+    border: none !important;
+    font-size: 1rem !important;
+    font-weight: 800 !important;
+    border: 1px solid var(--color-segundario) !important;
+    border-radius: 20px !important;
+    background-color: var(--color-principal) !important;
+    cursor: pointer !important;
+    color: var(--color-texto) !important;
+    transition: .3s ease !important;
+    text-transform: none !important;
+    line-height: normal !important;
+    &:hover {
+        background-color: var(--color-segundario) !important;
+        color: var(--color-amarillo) !important;
+    }
+}
+.contact__container-info-form button {
+  padding: 12px !important;
+  font-size: 24px !important;
+  border: 2px solid var(--color-texto) !important;
+}
+a {
+  font-family: "Oswald", serif;
+}
+
+body {
+    animation-name: slideInBody;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes slideInBody {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+
+}
+
