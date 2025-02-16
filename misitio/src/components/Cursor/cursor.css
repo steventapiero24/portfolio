@@ -6,10 +6,11 @@
   pointer-events: none;
   transform: translate(-50%, -50%);
   mix-blend-mode: difference;
-  z-index: 19999;
+  z-index: 9999;
 }
 
 .cursor {
+  z-index: 10000;
   width: 10px;
   height: 10px;
   background-color: var(--color-segundario);

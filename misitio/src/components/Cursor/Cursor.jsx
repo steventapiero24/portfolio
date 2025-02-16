@@ -40,8 +40,8 @@ const CustomCursor = () => {
       posY.current += (mouseY.current - posY.current) * 0.1;
 
       gsap.to(followerRef.current, {
-        x: posX.current - 20,
-        y: posY.current - 20,
+        x: posX.current - 0,
+        y: posY.current - 0,
         ease: "power2.out",
         duration: 0.5,
       });
