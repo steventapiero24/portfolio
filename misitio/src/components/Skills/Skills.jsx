@@ -1,5 +1,5 @@
 import React from "react";
-import Css from "../Skills/skills.css";
+import "./skills.css";
 import esferas from "../../../src/assets/esferas.svg";
 import ImageComponent from "../ImageComponent";
 import programacion from "../../assets/programacion.jpg";

@@ -1,5 +1,5 @@
 import React from 'react'
-import Css from '../SobreMi/Sobremi.css'
+import '../SobreMi/Sobremi.css'
 import ImageComponent from '../ImageComponent';
 import steven from '../../assets/steven.png'
 

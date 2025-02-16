@@ -7,10 +7,12 @@ import Portafolio from "./components/Portafolio/Portafolio";
 import Nav from "./components/Nav/Nav";
 import Contacto from "./components/Contacto/Contacto";
 import Skills from "./components/Skills/Skills";
+import Customcursor from "./components/Cursor/Cursor"
 
 function App() {
   return (
     <div className="App">
+      <Customcursor /> {Customcursor} 
       <Nav />
       <Element name="header">
         <Header />

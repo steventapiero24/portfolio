@@ -11,7 +11,7 @@ import idbangular from "../../assets/idbangular.png";
 import idsob from "../../assets/idsob.png";
 import reactcartera from "../../assets/reactcartera.png";
 import login from "../../assets/login.png";
-import Css from "../Portafolio/Portafolio.css";
+import "../Portafolio/Portafolio.css";
 
 const projects = [
   {

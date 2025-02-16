@@ -9,7 +9,8 @@
 * {
     padding: 0;
     margin: 0;
-    scroll-behavior: auto;
+    scroll-behavior: smooth;
+    cursor: none;
 }
 
 /* Estilo para la barra de desplazamiento */
@@ -77,4 +78,3 @@ body {
     }
 
 }
-

@@ -1,5 +1,5 @@
 import React from "react";
-import Css from "../Contacto/Contacto.css";
+import "../Contacto/Contacto.css";
 import EsferasComponent from "../ImageComponent";
 import Thankyou from "../../assets/thankyou.png";
 
@@ -7,7 +7,7 @@ const Contacto = () => {
   return (
     <div className="contact" id="contacto">
       <div className="contact__container-mobil">
-        <div class="horizontal-scrolling-items">
+        <div className="horizontal-scrolling-items">
             contacto
         </div>
       </div>

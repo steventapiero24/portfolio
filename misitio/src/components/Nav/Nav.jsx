@@ -1,7 +1,7 @@
 import React from 'react'
 import Isotipo from '../../assets/isotipo.png';
 import Logo from '../../assets/logo.png';
-import css from '../Nav/Nav.css'
+import "../Nav/Nav.css";
 
 const Nav = () => {
   return (
