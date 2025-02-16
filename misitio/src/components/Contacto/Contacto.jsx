@@ -8,7 +8,7 @@ const Contacto = () => {
     <div className="contact" id="contacto">
       <div className="contact__container-mobil">
         <div class="horizontal-scrolling-items">
-
+            contacto
         </div>
       </div>
       <div className="contact__container">

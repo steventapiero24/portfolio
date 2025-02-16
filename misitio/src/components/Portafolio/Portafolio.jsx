@@ -1,5 +1,4 @@
 import React from "react";
-import { useEffect } from "react";
 import { useState } from "react";
 import { Button } from "@mui/material";
 import CustomModal from "../CunstomModal"; // Importa el modal reutilizable
@@ -100,35 +99,6 @@ const projects = [
 ];
 
 const Portafolio = () => {
-  useEffect(() => {
-    const { gsap, ScrollTrigger } = window;
-    const Lenis = window.Lenis;
-    gsap.registerPlugin(ScrollTrigger);
-
-    const lenis = new Lenis({
-      duration: 1.5,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -15 * t)),
-    });
-
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-    requestAnimationFrame(raf);
-
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".img",
-        scrub: true,
-      },
-    }).to(".img", { stagger: 1, y: -250, scrub: true });
-
-    return () => {
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-      lenis.destroy();
-      tl.kill();
-    };
-  }, []);
 
   const [openModal, setOpenModal] = useState(null);
   const handleOpen = (modalId) => setOpenModal(modalId);
@@ -137,9 +107,6 @@ const Portafolio = () => {
   return (
     <div className="portafolio" id="projectos">
       <section className="section section-one">
-        {[...Array(3)].map((_, i) => (
-          <div key={i} className="line"></div>
-        ))}
       </section>
       <section className="section">
         {projects.map(({ id, image, title, technologies, description, team, habilidades, }) => (
