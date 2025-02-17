@@ -94,8 +94,30 @@
 }
 
 @media (max-width: 450px) {
+  .header-titulo__container  {
+    display: flex;
+    flex-direction: column;
+    flex-direction: column-reverse !important;
+    width: 400px;
+  }
+  .container-header {
+    width: 400px;
+  }
+  .header-titulo p {
+    width: 400px !important;
+    text-align: center !important;
+  }
+  .header-parrafo {
+    width: 400px !important;
+  }
   .header-parrafo p {
     right: 30px;
     text-align: center;
+  }
+  .header-titulo h2, .header-titulo h3 {
+    text-align: center;
+  }
+  .header-titulo h2 {
+    margin-top: -12px;
   }
 }

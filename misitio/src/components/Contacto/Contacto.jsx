@@ -2,19 +2,13 @@ import React from "react";
 import "../Contacto/Contacto.css";
 import EsferasComponent from "../ImageComponent";
 import Thankyou from "../../assets/thankyou.png";
+import ContactSlider from "../ContacSlider/ContactSlider";
 
 const Contacto = () => {
   return (
     <div className="contact" id="contacto">
-      <div className="contact__container-mobil">
-        <div className="horizontal-scrolling-items">
-            contacto
-        </div>
-      </div>
+        <ContactSlider/> {ContactSlider}
       <div className="contact__container">
-        <div className="contact__container-slider">
-            <span>Contacto</span>
-        </div>
         <div className="contact__container-info">
           <div className="contact__container-info-form">
             <form action="">

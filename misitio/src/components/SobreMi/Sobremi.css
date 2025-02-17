@@ -51,3 +51,21 @@
     width: 50%;
     transform: translateY(40px);
 }
+
+@media (max-width: 450px) {
+    .sobremi {
+        margin-top: 10vh;
+    }
+    .sobremi__container {
+        padding: 10px;
+        opacity: 1;
+    }
+    .sobremi__container-info {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .sobremi__container-info-description p {
+        font-size: 20px;
+        text-align: center;
+    }
+}

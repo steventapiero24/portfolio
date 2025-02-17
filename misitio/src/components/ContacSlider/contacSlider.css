@@ -1,0 +1,21 @@
+.demo-text {
+    overflow: hidden;
+    height: 200px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .wrapper.text {
+    font-size: clamp(2rem, 4vw, 16rem);
+    -webkit-text-stroke: 2px var(--color-texto);
+    line-height: 1;
+    font-weight: 900;
+    white-space: nowrap;
+    will-change: transform; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    color: var(--color-segundario);
+  }
+  
