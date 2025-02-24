@@ -85,7 +85,7 @@
 
 .header-parrafo p {
   position: absolute;
-  top: 51%;
+  top: 130%;
   text-align: left;
   right: 130px;
   color: var(--color-texto);
@@ -117,6 +117,7 @@
   }
   .header-parrafo {
     width: 400px !important;
+    height: 170px;
   }
   .header-parrafo p {
     right: 30px;

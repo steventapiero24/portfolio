@@ -12,6 +12,7 @@ import idsob from "../../assets/idsob.png";
 import reactcartera from "../../assets/reactcartera.png";
 // import login from "../../assets/login.png";
 import "../Portafolio/Portafolio.css";
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 const projects = [
   {
@@ -140,6 +141,11 @@ const Portafolio = () => {
             </div>
           </div>
         ))}
+      </section>
+      <section className="section__buton">
+        <a href="#vermas">Ver más proyectos
+          <ArrowForwardIcon size="medium" />
+        </a>
       </section>
     </div>
   );
