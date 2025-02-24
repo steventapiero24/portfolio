@@ -10,9 +10,9 @@ import Skills from "./components/Skills/Skills";
 import Customcursor from "./components/Cursor/Cursor"
 
 function App() {
-  return (
+  return  (
     <div className="App">
-      <Customcursor /> {Customcursor} 
+      <Customcursor />
       <Nav />
       <Element name="header">
         <Header />

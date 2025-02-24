@@ -1,7 +1,7 @@
 import React from 'react'
 import '../SobreMi/Sobremi.css'
 import ImageComponent from '../ImageComponent';
-import steven from '../../assets/steven.png'
+import steven from '../../assets/steven.webp'
 
 const SobreMi = () => {
   return (

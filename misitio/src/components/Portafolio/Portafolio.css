@@ -86,7 +86,6 @@
 .img__info-tecnologias-info span {
     font-size: 1rem;
     text-align: center;
-    height: 45px;
     font-weight: 800;
     color: var( --color-segundario);
     padding: 12px 10px 5px 10px;
@@ -168,6 +167,9 @@
         top: 101%;    }
     .img__info-tecnologias-info {
         width: 100%;
+    }
+    .img__info-tecnologias-info span {
+        height: 45px;
     }
 }
 

@@ -1,13 +1,13 @@
 import React from "react";
 import "../Contacto/Contacto.css";
 import EsferasComponent from "../ImageComponent";
-import Thankyou from "../../assets/thankyou.png";
+import Thankyou from "../../assets/thankyou.webp";
 import ContactSlider from "../ContacSlider/ContactSlider";
 
 const Contacto = () => {
   return (
     <div className="contact" id="contacto">
-        <ContactSlider/> {ContactSlider}
+        <ContactSlider/>
       <div className="contact__container">
         <div className="contact__container-info">
           <div className="contact__container-info-form">

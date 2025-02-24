@@ -2,11 +2,11 @@ import React from "react";
 import "./skills.css";
 import esferas from "../../../src/assets/esferas.svg";
 import ImageComponent from "../ImageComponent";
-import programacion from "../../assets/programacion.jpg";
-import webdesign from "../../assets/webdesign.png";
-import diseño from "../../assets/diseño.png";
-import figma from "../../assets/figma.png";
-import git from "../../assets/git.jpg";
+import programacion from "../../assets/programacion.webp";
+import webdesign from "../../assets/webdesign.webp";
+import diseño from "../../assets/diseño.webp";
+import figma from "../../assets/figma.webp";
+import git from "../../assets/git.webp";
 
 const SobreMi = () => {
   return (

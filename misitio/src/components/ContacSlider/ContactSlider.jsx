@@ -1,10 +1,10 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import LensIcon from '@mui/icons-material/Lens';
 import "./contacSlider.css";
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
-gsap.registerPlugin(ScrollTrigger); // 💡 ¡Registra el plugin!
+gsap.registerPlugin(ScrollTrigger);
 
 const ContactSlider = () => {
   const textWrapperRef = useRef(null);

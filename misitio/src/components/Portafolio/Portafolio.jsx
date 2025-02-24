@@ -2,15 +2,15 @@ import React from "react";
 import { useState } from "react";
 import { Button } from "@mui/material";
 import CustomModal from "../CunstomModal"; // Importa el modal reutilizable
-import clickerbait from "../../assets/clickerbait.jpg";
-// import seguros from "../../assets/seguros.png";
-import Phonegest from "../../assets/mockup-phonegest.png";
-import hangarleia from "../../assets/hangarleia.png";
-// import energia from "../../assets/energia.png";
-import idbangular from "../../assets/idbangular.png";
-import idsob from "../../assets/idsob.png";
-import reactcartera from "../../assets/reactcartera.png";
-// import login from "../../assets/login.png";
+import clickerbait from "../../assets/clickerbait.webp";
+// import seguros from "../../assets/seguros.webp";
+import Phonegest from "../../assets/mockup-phonegest.webp";
+import hangarleia from "../../assets/hangarleia.webp";
+// import energia from "../../assets/energia.webp";
+import idbangular from "../../assets/idbangular.webp";
+import idsob from "../../assets/idsob.webp";
+import reactcartera from "../../assets/reactcartera.webp";
+// import login from "../../assets/login.webp";
 import "../Portafolio/Portafolio.css";
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
