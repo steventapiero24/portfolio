@@ -94,6 +94,10 @@
 }
 
 @media (max-width: 450px) {
+  .header {
+    height: 70vh;
+  }
+
   .header-titulo__container  {
     display: flex;
     flex-direction: column;
@@ -103,9 +107,13 @@
   .container-header {
     width: 400px;
   }
+  .header-titulo  {
+    margin-top: 8rem;
+  }
   .header-titulo p {
     width: 400px !important;
     text-align: center !important;
+    margin-top: 0;
   }
   .header-parrafo {
     width: 400px !important;
@@ -113,6 +121,7 @@
   .header-parrafo p {
     right: 30px;
     text-align: center;
+    top: 30px;
   }
   .header-titulo h2, .header-titulo h3 {
     text-align: center;

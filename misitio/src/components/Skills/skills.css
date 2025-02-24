@@ -109,6 +109,7 @@
     }
     .container__skills-info-item span {
         font-size: 28px;
+        text-align: left;
     }
     .container__skills-info-image img{
         display: none;

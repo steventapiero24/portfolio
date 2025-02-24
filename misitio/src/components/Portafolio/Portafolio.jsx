@@ -3,14 +3,14 @@ import { useState } from "react";
 import { Button } from "@mui/material";
 import CustomModal from "../CunstomModal"; // Importa el modal reutilizable
 import clickerbait from "../../assets/clickerbait.jpg";
-import seguros from "../../assets/seguros.png";
+// import seguros from "../../assets/seguros.png";
 import Phonegest from "../../assets/mockup-phonegest.png";
 import hangarleia from "../../assets/hangarleia.png";
-import energia from "../../assets/energia.png";
+// import energia from "../../assets/energia.png";
 import idbangular from "../../assets/idbangular.png";
 import idsob from "../../assets/idsob.png";
 import reactcartera from "../../assets/reactcartera.png";
-import login from "../../assets/login.png";
+// import login from "../../assets/login.png";
 import "../Portafolio/Portafolio.css";
 
 const projects = [
@@ -18,20 +18,20 @@ const projects = [
     id: 1,
     image: idbangular,
     title: "Banco interamericano de desarrollo",
-    technologies: "Figma - Angular - Sass - Git - Gitlab - AngularUI",
+    technologies: "Figma - Angular - Sass - Git - Gitlab - AngularUI - Prime Ng - Typescript",
     team: "EEUU, Argentina, España",
-    habilidades: "Figma, UIkit, Metodologias agiles, Angular, Angular UI, Prime NG, bitbucket, canvan, Sass, Git, Gitub",
+    habilidades: "Figma, UxUi, UIkit, Metodologias agiles, Angular, Angular UI, Prime NG, bitbucket, canvan, Sass, Git, Gitub",
     description:
-      "Este proyecto se basaba en un panel de control para los administradores de prestamos, un portal del cliente donde podian ver, administrar sus creditos, generar informes, visualizar estados, etc.",
+      "Participé en el desarrollo de un sistema bancario basado en un panel de control integral, diseñado para administradores de préstamos. Este panel incluía tablas dinámicas, indicadores clave, informes automatizados, cálculo de cifras financieras y múltiples estados en cada componente, permitiendo la gestión eficiente de créditos y la generación de informes anuales sobre el portafolio crediticio. Mi rol se centró en el prototipado y la definición del Design System, aplicando la metodología Atomic Design para estructurar pantallas, componentes y microcomponentes de manera modular y escalable. Posteriormente, llevé estos diseños a la maquetación en Angular, creando los componentes iniciales del proyecto para que el equipo de desarrollo frontend integrara la lógica necesaria. Para garantizar escalabilidad y mantenimiento eficiente, se emplearon bibliotecas especializadas de Angular Material y otras herramientas del ecosistema. Esta metodología permitió optimizar el desarrollo, asegurando una interfaz consistente y una experiencia de usuario fluida y para todo el tema de estilos utilice Sass, implementando variables, ng class, estilos aisaldos y generales dependiendo el componente a trabajar.",
   },
   {
     id: 2,
     image: reactcartera,
-    title: "Cartera inteligente IDB",
+    title: "Cartera inteligente Banco Interamericano",
     technologies: "Figma - React - Sass - ReactUI - Css",
     team: "EEUU, España",
     habilidades: " Figma, UIkit, Metodologias agiles, React, React UI, bitbucket, Sass, Git, Gitub",
-    description: "Este proyecto fue muy interesante, fue mi primer contacto con librerias de react, este proyecto es el portal del cliente de todo tipo de carteras con el banco, graficas, indicadores, tablas, se crearon muchos componentes para cada indicador y asi mostrar la información lo mas claro posibble y de forma amigable para el usuario",
+    description: "Participé en el desarrollo de un portal de cartera bancaria, un proyecto clave en mi primer contacto con React y la biblioteca Material UI. El objetivo principal era crear una interfaz altamente visual, intuitiva y fácil de entender, priorizando la claridad en la presentación de datos a través de gráficos, indicadores y una experiencia de usuario limpia y amigable. Mi rol se enfocó en la maquetación de componentes en React, utilizando Material UI para garantizar un diseño cohesivo y escalable. Diseñé y estructuré diversos elementos como gráficos interactivos, indicadores clave, tablas dinámicas y submenús, asegurando una experiencia consistente y eficiente. En total, se desarrollaron más de 25 indicadores, cada uno con su propio conjunto de componentes optimizados para la visualización de datos financieros. Este enfoque modular permitió construir una interfaz flexible y de fácil mantenimiento, mejorando la accesibilidad y usabilidad del portal. Para todo el tema de estilos utilice Sass, esto me permitio tener todo super organizado y facil de mantener",
   },
   {
     id: 3,
@@ -40,7 +40,7 @@ const projects = [
     technologies: "Figma, UIkit, Angular - Sass - Git - Gitlab - PrimeNg - Figma",
     team: "España",
     habilidades: "Angular, Prime NG, Sass, Git, Gitlab",
-    description: "Este proyecto se creo para falicitar el ingreso de los usuarios mejorando la seguridad para el cliente, la idea es manejar credenciales en forma de Qr y asi tener control de tokens unicos donde el cliente garantizaria el ingreso a un unico usuario, se creo el panel de control para el cliente y un panel para el usuario, fue un proyecto de 4 mesese y de mucha investigacion, UXUI, conversaciones con cliente final y muchos cambios sobre el camino por lo experimental del proyecto",
+    description: "Participé en el desarrollo de un sistema de autenticación basado en credenciales QR, diseñado para mejorar la seguridad y facilitar el acceso de los usuarios. La solución permitía gestionar credenciales mediante tokens únicos, garantizando que cada cliente tuviera un acceso exclusivo y seguro. Para ello, se desarrollaron dos interfaces: un panel de control para el cliente y un panel de usuario, adaptados a sus respectivas necesidades.Este proyecto, con una duración de cuatro meses, involucró una profunda fase de investigación, diseño UX/UI y múltiples iteraciones, debido a su naturaleza experimental. Se mantuvo una comunicación constante con el cliente final, lo que llevó a múltiples ajustes y mejoras a lo largo del desarrollo. Mi rol se centró en la creación del prototipo y el Design System, transformando los requerimientos y conversaciones con el cliente en una interfaz gráfica intuitiva, accesible y visualmente elegante. Posteriormente, llevé estos diseños a la maquetación en Angular, utilizando PrimeNG para los componentes y Sass para la personalización y optimización de estilos.",
   },
   {
     id: 4,
@@ -69,33 +69,33 @@ const projects = [
     habilidades: " Wordpress - css - Woocommerce, Css, Figma",
     description: "E-commerce de figuras de acción y coleccionables, se rediseño por completo, se implemento el manejo de investarios, facturacion, email utomatizados etc.",
   },
-  {
-    id: 7,
-    image: energia,
-    title: "Comparador energía",
-    technologies: "Wordpress - Api - css - Js",
-    team: "EEUU, Argentina, España",
-    habilidades: " Metodologias agiles, Angular, Angular UI, Prime NG, bitbucket, canvas, Sass",
-    description: "Contenido del Modal 7",
-  },
-  {
-    id: 9,
-    image: seguros,
-    title: "Comparador energía",
-    technologies: "Wordpress - Api - css - Js",
-    team: "EEUU, Argentina, España",
-    habilidades: " Metodologias agiles, Angular, Angular UI, Prime NG, bitbucket, canvas, Sass",
-    description: "Contenido del Modal 7",
-  },
-  {
-    id: 7,
-    image: login,
-    title: "Comparador energía",
-    technologies: "Wordpress - Api - css - Js",
-    team: "EEUU, Argentina, España",
-    habilidades: " Metodologias agiles, Angular, Angular UI, Prime NG, bitbucket, canvas, Sass",
-    description: "Contenido del Modal 7",
-  },
+  // {
+  //   id: 7,
+  //   image: energia,
+  //   title: "Comparador energía",
+  //   technologies: "Wordpress - Api - css - Js",
+  //   team: "EEUU, Argentina, España",
+  //   habilidades: " Metodologias agiles, Angular, Angular UI, Prime NG, bitbucket, canvas, Sass",
+  //   description: "Contenido del Modal 7",
+  // },
+  // {
+  //   id: 9,
+  //   image: seguros,
+  //   title: "Comparador energía",
+  //   technologies: "Wordpress - Api - css - Js",
+  //   team: "EEUU, Argentina, España",
+  //   habilidades: " Metodologias agiles, Angular, Angular UI, Prime NG, bitbucket, canvas, Sass",
+  //   description: "Contenido del Modal 7",
+  // },
+  // {
+  //   id: 7,
+  //   image: login,
+  //   title: "Comparador energía",
+  //   technologies: "Wordpress - Api - css - Js",
+  //   team: "EEUU, Argentina, España",
+  //   habilidades: " Metodologias agiles, Angular, Angular UI, Prime NG, bitbucket, canvas, Sass",
+  //   description: "Contenido del Modal 7",
+  // },
 ];
 
 const Portafolio = () => {
