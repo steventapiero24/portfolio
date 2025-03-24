@@ -6,21 +6,15 @@ const Header = () => {
     <div className="header" id="header">
       <div className="container-header">
         <div className="header-titulo">
-          <h3>¡Hola! Bienvenido a</h3>
-          <div className="header-titulo__container">
-            <p>
-              Developer especializado en Ux/UI, creativo, apasionado y amante del
-              buen diseño.
-            </p>
-            <h2>mi sitio web</h2>
-          </div>
+          <p>“Lo funcional es mejor que lo bello,  porque lo que funciona bien permanece en el tiempo”.</p>
+          <span>Bienvenido al sitio web de</span>
+          <h3>Steven Tapiero</h3>
         </div>
       </div>
-      <div className="header-parrafo">
+      <div className="header-titulo__container">
         <p>
-          “Lo funcional es mejor que lo bello, <br />
-          porque lo que funciona bien <br />
-          permanece en el tiempo”.
+          Developer especializado en Ux/UI, creativo, apasionado y amante del
+          buen diseño.
         </p>
       </div>
     </div>

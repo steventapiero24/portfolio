@@ -1,65 +1,73 @@
 import React from "react";
 import "./skills.css";
-import esferas from "../../../src/assets/esferas.svg";
-import ImageComponent from "../ImageComponent";
-import programacion from "../../assets/programacion.webp";
 import webdesign from "../../assets/webdesign.webp";
 import diseño from "../../assets/diseño.webp";
 import figma from "../../assets/figma.webp";
 import git from "../../assets/git.webp";
+import angular from "../../assets/idbangular.webp"
+import tresd from "../../assets/3ddiseño.webp"
+import scrum from "../../assets/reactcartera.webp"
+
+const skills = [
+  {
+    id: 1,
+    title: "uxui",
+    habilidades: "UX / UI",
+    imageUrl: figma,
+  },
+  {
+    id: 2,
+    habilidades: "Html - CSS - Sass - JavaScript",
+    imageUrl: webdesign,
+  },
+  {
+    id: 3,
+    habilidades: "Angular Js - React Js",
+    imageUrl: angular,
+  },
+  {
+    id: 4,
+    habilidades: "Figma - Potoshop - Illustrator",
+    imageUrl: diseño,
+  },
+  {
+    id: 5,
+    habilidades: "Git - Github - Gitlab",
+    imageUrl: git,
+  },
+  {
+    id: 5,
+    habilidades: "Scrum - kamban",
+    imageUrl: scrum,
+  },
+  {
+    id: 5,
+    habilidades: "Cinema 4d - Blender",
+    imageUrl: tresd,
+  },
+];
 
 const SobreMi = () => {
   return (
     <div className="skills" id="skills">
       <div className="containers__skills">
-        <div className="containers__skills-title">
-          <h2>Skills</h2>
-        </div>
         <div className="container__skills-info">
-          <div className="container__skills-info-image">
-            <ImageComponent src={esferas} alt="Esferas" />
-          </div>
           <div className="container__skills-info-items">
-            <div className="container__skills-info-item">
-              <span>Html - CSS - Sass - javaScript</span>
-              <ImageComponent
-                className="container__skills-info-item-image"
-                src={programacion}
-                alt="Esferas"
-              />
-            </div>
-            <div className="container__skills-info-item">
-              <span>UX/UI - Figma</span>
-              <ImageComponent
-                className="container__skills-info-item-image"
-                src={figma}
-                alt="Esferas"
-              />
-            </div>
-            <div className="container__skills-info-item">
-              <span>React Js and Angular</span>
-              <ImageComponent
-                className="container__skills-info-item-image"
-                src={webdesign}
-                alt="Esferas"
-              />
-            </div>
-            <div className="container__skills-info-item">
-              <span>Git - Github - Gitlab - Bitbucket</span>
-              <ImageComponent
-                className="container__skills-info-item-image"
-                src={git}
-                alt="Esferas"
-              />
-            </div>
-            <div className="container__skills-info-item">
-              <span>Photoshop/ Illustrator/After effects</span>
-              <ImageComponent
-                className="container__skills-info-item-image"
-                src={diseño}
-                alt="Esferas"
-              />
-            </div>
+            {skills.map(({ id, habilidades, title, imageUrl }) => (
+              <div key={id} className="container__skills-info-item">
+                <img
+                  className="container__skills-info-item-image"
+                  src={imageUrl}
+                  alt={title}
+                />
+                <span className="container__skills-info-item-span">{habilidades}</span>
+                <img
+                  className="container__skills-info-item-image two"
+                  src={imageUrl}
+                  alt={title}
+                />
+              </div>
+            ))}
           </div>
         </div>
       </div>

@@ -1,6 +1,5 @@
 import React from 'react'
 import Isotipo from '../../assets/isotipo.webp';
-import Logo from '../../assets/logo.webp';
 import "../Nav/Nav.css";
 
 const Nav = () => {
@@ -10,9 +9,6 @@ const Nav = () => {
             <div className='image-container'>
                 <img src= {Isotipo} alt='isotipo'/>
             </div>
-          <div className='image-container'>
-              <img src= {Logo} alt='logo'/>
-          </div>
       </div>
 
       <div className="nav">

@@ -1,5 +1,5 @@
 import React from "react";
-import { Element } from "react-scroll";
+// import Scrollbar from "smooth-scrollbar";
 import "./App.css";
 import Header from "./components/Header/Header";
 import SobreMi from "./components/SobreMi/Sobremi";
@@ -7,34 +7,57 @@ import Portafolio from "./components/Portafolio/Portafolio";
 import Nav from "./components/Nav/Nav";
 import Contacto from "./components/Contacto/Contacto";
 import Skills from "./components/Skills/Skills";
-import Customcursor from "./components/Cursor/Cursor"
+import Customcursor from "./components/Cursor/Cursor";
+import ScrollSlider from "./components/ScrollSlider/ScrollSlider";
 
 function App() {
+
+  // const scrollbarRef = useRef(null);
+
+  // useEffect(() => {
+  
+  //   const scrollbarInstance = Scrollbar.init(document.body, {
+  //     damping: 0.04,
+  //     thumbMinSize: 20,
+  //     renderByPixels: true,
+  //     continuousScrolling: true,
+  //     alwaysShowTracks: false,
+  //   });
+  
+  //   return () => {
+  //     scrollbarInstance.destroy();
+  //   };
+  // }, []);
   return  (
-    <div className="App">
+    <div  className="App">
       <Customcursor />
       <Nav />
-      <Element name="header">
+      <div name="header">
         <Header />
-      </Element>
+      </div>
 
-      <Element name="portafolio">
+      <div name="portafolio">
         <Portafolio />
-      </Element>
+      </div>
 
-      <Element name="skills">
+      <div name="skills">
+        <ScrollSlider />
+      </div>
+
+      <div name="skills">
         <Skills />
-      </Element>
+      </div>
 
-      <Element name="sobremi">
+      <div name="sobremi">
         <SobreMi />
-      </Element>
+      </div>
 
-      <Element name="contacto">
+      <div name="contacto">
         <Contacto />
-      </Element>
+      </div>
     </div>
   );
 }
 
 export default App;
+

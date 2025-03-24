@@ -1,8 +1,7 @@
 .skills {
     position: relative;
     z-index: 200;
-    background-color: white;
-    height: 60vh;
+    background-color: var(--color-amarillo);
 }
 .containers__skills {
     display: flex;
@@ -10,16 +9,7 @@
     align-items: center;
     justify-content: center;
     height: 100%;
-    padding: 80px 120px;
-}
-.containers__skills-title {
-    display: flex;
-    align-items: center;
-    height: 15%;
-}
-.containers__skills-title h2 {
-    font-size: 64px;
-    color: var(--color-segundario);
+    padding: 80px 0;
 }
 .container__skills-info {
     height: 100%;
@@ -35,18 +25,6 @@
         padding: 20px;
     }
 }
-.container__skills-info-image {
-    display: flex;
-    flex: 1;
-    align-items: center;
-    justify-content: center;
-    padding: 40px;
-}
-.container__skills-info-image img {
-    transform: translateX(-30px);
-    width: 100%;
-    height: 100%;
-}
 .container__skills-info-items {
     display: flex;
     align-items: center;
@@ -58,7 +36,7 @@
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
     position: relative;
 }
 .container__skills-info-item::after {
@@ -66,7 +44,7 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    height: 1px;
+    height: 100%;
     width: 0;
     background-color: var(--color-texto);
     transition: width 0.5s ease;
@@ -76,14 +54,18 @@
     width: 100%; /* Expande el borde de izquierda a derecha */
 }
 
-.container__skills-info-item span {
-    text-align: right;
-    font-size: 48px;
+.container__skills-info-item-span {
+    text-align: center;
+    font-size: 80px;
+    font-weight: 500;
     transition: .5s ease;
-    .container__skills-info-item:hover & {
-        transform: translateX(-8px);
-        color: var(--color-segundario);
-    }
+    color: var(--color-texto);
+    z-index: 1000;
+}
+.container__skills-info-item:hover .container__skills-info-item-span {
+    transform: translateX(-8px);
+    color: var(--color-principal);
+    font-weight: 100;
 }
 
 .container__skills-info-item:hover .container__skills-info-item-image {
@@ -95,11 +77,15 @@
     width: 200px;
     height: 200px;
     position: absolute;
-    left: -10%;
+    left: 2%;
     opacity: 0; /* Inicialmente invisible */
     visibility: hidden; /* Inicialmente no visible */
     transition: opacity 0.3s ease-in, visibility 0.3s ease-in; /* Aplica la transición */
     z-index: 100;
+    border-radius: 20px;
+}
+.two {
+    left: 88%;
 }
 @media (max-width: 1250px) {
     .skills {

@@ -1,21 +1,18 @@
 .sobremi {
     position: relative;
     z-index: 200;
-    height: 80vh;
-    margin-top: 25vh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url(../../assets/fondodos.webp);
+    height: 200vh;
 }
 
 .sobremi__container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
+    align-items: flex-start;
+    justify-content: space-between;
     height: 100%;
-    padding: 40px 130px;
+    padding: 40px 80px;
     opacity: 1;
 }
 .sobremi__container-info {
@@ -23,33 +20,66 @@
     width: 100%;
     justify-content: space-between;
     align-items: center;
-    gap: 80px;
+    gap: 20px;
+    width: 730px;
+    padding: 20px;
+    border-bottom: 1px solid var(--color-texto);
+}
+.sobremi__container-info-icon {
+    width: 190px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sobremi__container-info-icon img {
+    width: 50px;
 }
 .sobremi__container-title {
     display: flex;
     align-items: center;
-    height: 15%;
+    flex-direction: column;
 }
 .sobremi__container-title h2 {
-    font-size: 64px;
-    color: var(--color-segundario);
+    font-size: 100px;
+    color: var(--color-texto);
+    font-weight: 900;
+}
+.sobremi__container-title span {
+    font-size: 100px;
+    font-weight: 100;
+    color: var(--color-texto);
+}
+
+.sobremi__container-items {
+    display: flex;
+    flex-direction: column;
 }
 .sobremi__container-info-description {
     flex: 1;
     font-size: 32px;
+    max-width: 500px;
+    border-left: 1px solid var(--color-texto);
+    padding: 15px;
+}
+.sobremi__container-info-description h5 {
+    font-size: 75px;
+    font-weight: 400;
+    line-height: normal;
 }
 .sobremi__container-info-description p {
-    font-weight: 100;
+    font-size: 42px;
+    font-weight: 400;
+    line-height: normal;
 }
 .sobremi__container-info-image {
     display: flex;
-    flex: 1;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    width: 100%
 }
 .sobremi__container-info-image img {
-    width: 50%;
-    transform: translateY(40px);
+    height: 442px;
+    border-radius: 40px;
 }
 
 @media (max-width: 450px) {
@@ -63,6 +93,7 @@
     .sobremi__container-info {
         flex-direction: column;
         gap: 20px;
+        width: 863px;
     }
     .sobremi__container-info-description p {
         font-size: 20px;
