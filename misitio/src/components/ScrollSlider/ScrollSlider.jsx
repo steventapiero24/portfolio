@@ -14,9 +14,9 @@ const ScrollSlider = () => {
 
     gsap.fromTo(
       textWrapperReftwo.current,
-      { x: "10%" }, 
+      { x: "20%" }, 
       {
-        x: "-50%", 
+        x: "-30%", 
         ease: "none",
         duration: 1,
         scrollTrigger: {
@@ -24,16 +24,28 @@ const ScrollSlider = () => {
           start: "top bottom",
           end: "bottom top",
           scrub: 1,
-          markers: true,
+          markers: false,
         },
       }
     );
+    // ScrollTrigger.create({
+    //   trigger: sectionscrollRef.current,
+    //   start: "top top",
+    //   pin: true, // Fija el elemento
+    //   pinSpacing: false, // Evita que agregue espacio extra
+    //   markers: false,
+    // });
   }, []);
+ 
 
   return (
-    <section className="container-text">
+    <section  className="container-text">
       <div className="wrappertwo texttwo" ref={textWrapperReftwo}>
-        CONOCE  MIS  SKILLS 
+        CONOCE    MIS    SKILLS 
+        <LensIcon sx={{ fontSize: 30 }}/>
+        CONOCE    MIS    SKILLS 
+        <LensIcon sx={{ fontSize: 30 }}/>
+        CONOCE    MIS    SKILLS 
         <LensIcon sx={{ fontSize: 30 }}/>
       </div>
     </section>

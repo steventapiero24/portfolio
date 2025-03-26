@@ -42,23 +42,26 @@ button {
     border: none !important;
     font-size: 1.2rem !important;
     font-weight: 500 !important;
-    border-radius: 20px !important;
+    border-radius: 10px !important;
     cursor: pointer !important;
     color: var(--color-amarillo) !important;
     transition: .3s ease !important;
     text-transform: none !important;
     line-height: normal !important;
     font-family: 'Clash Display', sans-serif;
-    background-color: transparent !important;
+    background-color: var(--color-segundario) !important;
     &:hover {
-        background-color: var(--color-segundario) !important;
+        background-color: var(--color-principal) !important;
         color: var(--color-amarillo) !important;
     }
 }
 .contact__container-info-form button {
   padding: 12px !important;
   font-size: 24px !important;
-  border: 2px solid var(--color-texto) !important;
+}
+
+.container-menu button {
+  background-color: transparent !important;
 }
 a {
   font-family: 'Clash Display', sans-serif;;

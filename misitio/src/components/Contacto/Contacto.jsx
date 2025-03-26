@@ -25,21 +25,21 @@ const Contacto = () => {
         <div className="contact__container-social">
           <div className="contact__container-social-links">
             <a
-              href="https://www.linkedin.com/in/brandon-steven-tapiero-yela-6556182aa/"
+              href="https://www.linkedin.com/in/brandon-steven-tapiero-yela-6556182aa"
               target="_blank"
               rel="noopener noreferrer"
             >
               LinkedIn
             </a>
             <a
-              href="https://www.linkedin.com/in/brandon-steven-tapiero-yela-6556182aa/"
+              href="https://www.instagram.com/steventapiero/"
               target="_blank"
               rel="noopener noreferrer"
             >
               Instagram
             </a>
             <a
-              href="https://www.tiktok.com/@_steventapiero_"
+              href="https://www.tiktok.com/@_steventapiero_?lang=es"
               target="_blank"
               rel="noopener noreferrer"
             >

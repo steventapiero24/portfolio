@@ -27,7 +27,7 @@ const skills = [
   },
   {
     id: 4,
-    habilidades: "Figma - Potoshop - Illustrator",
+    habilidades: "Figma - Pothoshop - Illustrator",
     imageUrl: diseño,
   },
   {

@@ -15,53 +15,70 @@ const CustomCursor = () => {
   const [linkPosition, setLinkPosition] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
-    // Actualiza la posición del mouse
-    const updateMousePos = (e) => {
-      mouseX.current = e.clientX;
-      mouseY.current = e.clientY;
-      setLinkPosition({ x: e.clientX, y: e.clientY });
-    };
+  const updateMousePos = (e) => {
+    mouseX.current = e.clientX;
+    mouseY.current = e.clientY;
+    setLinkPosition({ x: e.clientX, y: e.clientY });
+  };
 
-    // Maneja el hover sobre los enlaces
-    const handleMouseEnterLink = () => setHoveringLink(true);
-    const handleMouseLeaveLink = () => setHoveringLink(false);
+  const handleMouseEnterLink = () => setHoveringLink(true);
+  const handleMouseLeaveLink = () => setHoveringLink(false);
 
-    document.addEventListener("mousemove", updateMousePos);
+  // Detectar si el cursor entra en la sección contacto
+  const handleMouseEnterContact = () => {
+    if (cursorRef.current) cursorRef.current.classList.add("contact-cursor");
+  };
+  const handleMouseLeaveContact = () => {
+    if (cursorRef.current) cursorRef.current.classList.remove("contact-cursor");
+  };
 
-    const links = document.querySelectorAll("a");
+  document.addEventListener("mousemove", updateMousePos);
+
+  const links = document.querySelectorAll("a");
+  links.forEach((link) => {
+    link.addEventListener("mouseenter", handleMouseEnterLink);
+    link.addEventListener("mouseleave", handleMouseLeaveLink);
+  });
+
+  // Agregar eventos a la sección contacto
+  const contactSection = document.querySelector(".contact");
+  if (contactSection) {
+    contactSection.addEventListener("mouseenter", handleMouseEnterContact);
+    contactSection.addEventListener("mouseleave", handleMouseLeaveContact);
+  }
+
+  gsap.ticker.add(() => {
+    posX.current += (mouseX.current - posX.current) * 0.1;
+    posY.current += (mouseY.current - posY.current) * 0.1;
+
+    gsap.to(followerRef.current, {
+      x: posX.current,
+      y: posY.current,
+      ease: "power2.out",
+      duration: 0.5,
+    });
+
+    gsap.to(cursorRef.current, {
+      x: mouseX.current,
+      y: mouseY.current,
+      ease: "power3.out",
+      duration: 0.3,
+    });
+  });
+
+  return () => {
+    document.removeEventListener("mousemove", updateMousePos);
     links.forEach((link) => {
-      link.addEventListener("mouseenter", handleMouseEnterLink);
-      link.addEventListener("mouseleave", handleMouseLeaveLink);
+      link.removeEventListener("mouseenter", handleMouseEnterLink);
+      link.removeEventListener("mouseleave", handleMouseLeaveLink);
     });
-
-    // GSAP ticker para suavizar el seguimiento del cursor
-    gsap.ticker.add(() => {
-      posX.current += (mouseX.current - posX.current) * 0.1;
-      posY.current += (mouseY.current - posY.current) * 0.1;
-
-      gsap.to(followerRef.current, {
-        x: posX.current - 0,
-        y: posY.current - 0,
-        ease: "power2.out",
-        duration: 0.5,
-      });
-
-      gsap.to(cursorRef.current, {
-        x: mouseX.current,
-        y: mouseY.current,
-        ease: "power3.out",
-        duration: 0.3,
-      });
-    });
-    return () => {
-      document.removeEventListener("mousemove", updateMousePos);
-      links.forEach((link) => {
-        link.removeEventListener("mouseenter", handleMouseEnterLink);
-        link.removeEventListener("mouseleave", handleMouseLeaveLink);
-      });
-      gsap.ticker.remove(() => {});
-    };
-  }, []);
+    if (contactSection) {
+      contactSection.removeEventListener("mouseenter", handleMouseEnterContact);
+      contactSection.removeEventListener("mouseleave", handleMouseLeaveContact);
+    }
+    gsap.ticker.remove(() => {});
+  };
+}, []);
 
   return (
     <>

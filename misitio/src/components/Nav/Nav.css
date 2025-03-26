@@ -14,7 +14,7 @@
 @media (max-width: 450px) {
     .container-menu {
         justify-content: space-around;
-        width: 400px;
+        width: auto;
     }
 }
 .isotipo {
@@ -50,6 +50,7 @@
     transition: .3s ease;
     display: inline-block;
     font-family: 'Clash Display', sans-serif;
+    cursor: pointer;
 }
 .menu a:hover {
     color: var(--color-principal);

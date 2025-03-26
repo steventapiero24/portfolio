@@ -48,3 +48,29 @@
   line-height: normal;
   width: 645px;
 }
+
+@media (max-width: 450px) {
+  .header-titulo h3 {
+    font-size: 5.9rem;
+    line-height: normal;
+  }
+  .header-titulo__container {
+    height: 100px;
+  }
+  .header-titulo__container p {
+    font-size: 1rem;
+    width: 645px;
+  }
+  .header-titulo span {
+    font-size: 1rem;
+  }
+  .header-titulo p {
+    line-height: normal;
+    font-size: 1rem;
+  }
+  .header {
+    padding: 0 2rem;
+    height: 60vh;
+  }
+  
+}

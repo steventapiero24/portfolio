@@ -58,3 +58,10 @@
   transform: translate(-50%, -50%) scale(1);
   opacity: 1;
 }
+
+@media (max-width: 450px) {
+  .cursor,
+  .cursor-follower {
+    display: none;
+  }
+}

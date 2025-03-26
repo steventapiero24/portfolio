@@ -22,10 +22,10 @@ const Nav = () => {
             </ul>
         </nav>
       </div>
-      <div className="button">
-        <button>
+      <div className="menu">
+        <a href='./Hoja de vidaStevenT.pdf' download={''}>
           Descargar hv
-        </button>
+        </a>
       </div>
 
     </div>

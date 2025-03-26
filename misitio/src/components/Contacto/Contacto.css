@@ -113,6 +113,9 @@
 }
 
 @media (max-width: 450px) { 
+    .contact {
+        height: auto;
+    }
     .contact__container {
         padding: 10px;
     }
