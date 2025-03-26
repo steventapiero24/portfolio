@@ -87,18 +87,21 @@
 .two {
     left: 88%;
 }
-@media (max-width: 1250px) {
+@media (max-width: 450px) {
     .skills {
         height: auto;
     }
     .container__skills-info-item span {
         font-size: 28px;
-        text-align: left;
+        text-align: center;
     }
     .container__skills-info-image img{
         display: none;
     }
     .container__skills-info-item {
-        justify-content: flex-start;
+        justify-content: center;
+    }
+    .container__skills-info-item-image {
+        display: none;
     }
 }
