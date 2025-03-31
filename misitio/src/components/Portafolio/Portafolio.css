@@ -246,3 +246,25 @@
     line-height: normal;
     color: var(--color-texto);
 }
+.customModal__container-button {
+    display: flex;
+    gap: 32px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+}
+.customModal__container-button a {
+    padding: 4px 12px;
+    background-color: var(--color-amarillo);
+    color: var(--color-texto);
+    border-radius: 16px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: .3s ease;
+    font-weight: 500;
+    font-family: 'Clash Display', sans-serif
+}
+.customModal__container-button a:hover {
+    background-color: var(--color-principal);
+    color: var(--color-white);
+}

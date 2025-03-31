@@ -1,6 +1,6 @@
 import { Button } from "@mui/material";
 import CustomModal from "../CunstomModal";
-import clickerbait from "../../assets/clickerbait.webp";
+import loginAngular from "../../assets/loginangular.webp";
 import idbangular from "../../assets/idbangular.webp";
 import idsob from "../../assets/idsob.webp";
 import reactcartera from "../../assets/reactcartera.webp";
@@ -45,12 +45,12 @@ const projects = [
   },
   {
     id: 4,
-    image: clickerbait,
-    title: "Clickerbait",
-    technologies: "Wordpress - Gsap - JS - Css",
-    team: "España",
-    habilidades: "Wordpress, css, Gsap",
-    description: "Esta web se realizo para una agencia de marketing implementando gsap, en wordpress y Elementor",
+    image: loginAngular,
+    title: "Angular test",
+    technologies: "Angular16 - Angular Material - Ts - Css - Figma",
+    team: "Colombia",
+    habilidades: "Angular, AngularUi, css, Gsap",
+    description: "Esta web se realizo para mostar un poco de como preparo un proyecto, el codigo que utilizo, la performance, como manejo el tema de ramas, git, git hub, tambien como modifico librerias de Angular para poder utilziar componentes y reutilizarlos, todo lo realice ya que en mis anteriores proyectos no puedo mostrar codigo por temas de proteccion y privacidad",
   },
 ];
 
@@ -126,6 +126,12 @@ const Portafolio = () => {
                   <div className="customModal__container">
                     <h3 className="customModal__label">Descripcion</h3>
                     <p className="customModal__description">{description}</p>
+                    {id === 4 && (
+                      <div className="customModal__container-button">
+                        <a href="https://github.com/steventapiero24/Angular16-test"> Ir al repositorio </a>
+                        <a href="https://angular16-test.netlify.app/"> Ver en vivo </a>
+                      </div>  
+                    )}
                   </div>
                   <div className="customModal__container">
                     <h3 className="customModal__label">Habilidades</h3>
