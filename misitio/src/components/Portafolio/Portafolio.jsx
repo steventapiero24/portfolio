@@ -83,6 +83,7 @@ const Portafolio = () => {
     }
   }, []);
   
+  
 
   return (
     <div className="portafolio" id="projectos">
@@ -143,6 +144,9 @@ const Portafolio = () => {
           )
         )}
       </section>
+      <div className="section-button">
+        <button> Ver mas proyectos </button>
+      </div>
     </div>
   );
 };

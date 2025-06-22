@@ -14,9 +14,9 @@ const ContactSlider = () => {
 
     gsap.fromTo(
       textWrapperRef.current,
-      { x: "1%" }, 
+      { x: "-10%" }, 
       {
-        x: "-10%", 
+        x: "10%", 
         ease: "none",
         duration: 1,
         scrollTrigger: {

@@ -1,5 +1,4 @@
 import React from "react";
-// import Scrollbar from "smooth-scrollbar";
 import "./App.css";
 import Header from "./components/Header/Header";
 import SobreMi from "./components/SobreMi/Sobremi";
@@ -11,23 +10,6 @@ import Customcursor from "./components/Cursor/Cursor";
 import ScrollSlider from "./components/ScrollSlider/ScrollSlider";
 
 function App() {
-
-  // const scrollbarRef = useRef(null);
-
-  // useEffect(() => {
-  
-  //   const scrollbarInstance = Scrollbar.init(document.body, {
-  //     damping: 0.04,
-  //     thumbMinSize: 20,
-  //     renderByPixels: true,
-  //     continuousScrolling: true,
-  //     alwaysShowTracks: false,
-  //   });
-  
-  //   return () => {
-  //     scrollbarInstance.destroy();
-  //   };
-  // }, []);
   return  (
     <div  className="App">
       <Customcursor />

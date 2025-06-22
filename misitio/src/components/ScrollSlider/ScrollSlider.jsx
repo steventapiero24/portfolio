@@ -16,7 +16,7 @@ const ScrollSlider = () => {
       textWrapperReftwo.current,
       { x: "20%" }, 
       {
-        x: "-30%", 
+        x: "-40%", 
         ease: "none",
         duration: 1,
         scrollTrigger: {

@@ -117,7 +117,7 @@
         height: auto;
     }
     .contact__container {
-        padding: 10px;
+        padding: 20px 10px;
     }
     .contact__container-info {
         flex-direction: column;

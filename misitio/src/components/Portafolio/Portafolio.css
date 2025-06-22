@@ -11,7 +11,14 @@
     margin: 0 auto;
     gap: 0;
     padding: 0 30px;
-    height: 100vh;
+    height: 80vh;
+}
+.section-button{
+    display: flex;
+    padding: 0 30px;
+    height: 10vh;
+    justify-content: center;
+    align-items: center;
 }
 .section-one {
     height: 25vh;
@@ -190,7 +197,7 @@
         display: flex;
         flex-direction: column;
         height: auto;
-        gap: 40px;
+        gap: 60px;
         margin: 0 auto;
     }
     .img {
@@ -217,6 +224,15 @@
     .sobremi__container-title h2, .sobremi__container-title span {
         font-size: 52px;
     }
+    .img {
+    &:after {
+        content: '';
+    }
+
+    &:hover::after {
+        background-color: transparent;
+    }
+}
 }
 
 /* Modal */
