@@ -2,11 +2,16 @@
     overflow: hidden;
     display: flex;
     align-items: center;
-    background-color: var(--color-texto);
+  }
+
+  .margin {
+    margin-top: 300px;
   }
   
   .wrappertwo.texttwo {
     font-size: 10rem;
+  
+    z-index: 1000;
     word-spacing: .2em;
     line-height: 1;
     font-weight: 900;
@@ -15,7 +20,7 @@
     justify-content: center;
     align-items: center;
     gap: 60px;
-    color: var(--color-amarillo);
+    color: var(--color-texto);
   }
   
   

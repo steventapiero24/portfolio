@@ -1,6 +1,6 @@
 import { Button } from "@mui/material";
 import CustomModal from "../CunstomModal";
-import loginAngular from "../../assets/loginangular.webp";
+import futuroValor from "../../assets/futuro-valor.webp";
 import idbangular from "../../assets/idbangular.webp";
 import idsob from "../../assets/idsob.webp";
 import reactcartera from "../../assets/reactcartera.webp";
@@ -36,7 +36,7 @@ const projects = [
   {
     id: 3,
     image: idsob,
-    title: "Instituto de ciberseguridad de España",
+    title: "España Instituto de ciberseguridad",
     technologies:
       "Figma, UIkit, Angular - Sass - Git - Gitlab - PrimeNg - Figma",
     team: "España",
@@ -45,12 +45,12 @@ const projects = [
   },
   {
     id: 4,
-    image: loginAngular,
-    title: "Angular test",
-    technologies: "Angular16 - Angular Material - Ts - Css - Figma",
+    image: futuroValor,
+    title: "Futuro valor",
+    technologies: "Wordpress - Elementor pro - Js - Css - Figma",
     team: "Colombia",
-    habilidades: "Angular, AngularUi, css, Gsap",
-    description: "Esta web se realizo para mostar un poco de como preparo un proyecto, el codigo que utilizo, la performance, como manejo el tema de ramas, git, git hub, tambien como modifico librerias de Angular para poder utilziar componentes y reutilizarlos, todo lo realice ya que en mis anteriores proyectos no puedo mostrar codigo por temas de proteccion y privacidad",
+    habilidades: "Wordpress, Elementor, css, Gsap",
+    description: "Sitio web desarrollado para Futuro Valor, una empresa colombiana especializada en consultoría financiera y educación digital.El proyecto abarcó todo el proceso: desde el diseño visual y la definición del flujo de navegación, pasando por la investigación y prototipado, hasta su implementación en WordPress utilizando Elementor. Esta solución permite al equipo de la empresa administrar fácilmente el contenido y mantener el sitio actualizado de forma autónoma.",
   },
 ];
 
@@ -129,8 +129,8 @@ const Portafolio = () => {
                     <p className="customModal__description">{description}</p>
                     {id === 4 && (
                       <div className="customModal__container-button">
-                        <a href="https://github.com/steventapiero24/Angular16-test"> Ir al repositorio </a>
-                        <a href="https://angular16-test.netlify.app/"> Ver en vivo </a>
+                        <a href="https://futurovalor.com/"> Ir al repositorio </a>
+                        <a target="_blank" rel="noreferrer" href="https://futurovalor.com/" > Ver en vivo </a>
                       </div>  
                     )}
                   </div>

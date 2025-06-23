@@ -1,7 +1,6 @@
 .skills {
     position: relative;
     z-index: 200;
-    background-color: var(--color-amarillo);
 }
 .containers__skills {
     display: flex;

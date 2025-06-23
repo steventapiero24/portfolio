@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./App.css";
 import Header from "./components/Header/Header";
 import SobreMi from "./components/SobreMi/Sobremi";
@@ -9,37 +9,81 @@ import Skills from "./components/Skills/Skills";
 import Customcursor from "./components/Cursor/Cursor";
 import ScrollSlider from "./components/ScrollSlider/ScrollSlider";
 
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollSmoother } from "gsap/ScrollSmoother";
+import GrowingSphere from "./components/GrowingSphere/GrowingSphere";
+
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+
 function App() {
-  return  (
-    <div  className="App">
-      <Customcursor />
-      <Nav />
-      <div name="header">
-        <Header />
-      </div>
+  useEffect(() => {
+    const smoother = ScrollSmoother.create({
+      wrapper: "#smooth-wrapper",
+      content: "#smooth-content",
+      smooth: 1.5,
+      effects: true,
+      smoothTouch: 0.1,
+    });
 
-      <div name="portafolio">
-        <Portafolio />
-      </div>
+    const sections = [
+      { trigger: "#blackColor", color: "#111111" },
+      { trigger: "#amarilloColor", color: "#FFE5B6" },
+    ];
 
-      <div name="skills">
-        <ScrollSlider />
-      </div>
+    sections.forEach(({ trigger, color }) => {
+      gsap.to("body", {
+        backgroundColor: color,
+        duration: 0.5,
+        ease: "power1.out",
+        scrollTrigger: {
+          trigger,
+          start: "top center",
+          end: "bottom center",
+          scrub: true,
+        },
+      });
+    });
 
-      <div name="skills">
-        <Skills />
-      </div>
+    return () => {
+      smoother.kill(); // cleanup smoother on unmount
+    };
+  }, []);
 
-      <div name="sobremi">
-        <SobreMi />
-      </div>
+  return (
+    <div id="smooth-wrapper">
+      <div id="smooth-content" className="App">
+        <Customcursor />
+        <Nav />
 
-      <div name="contacto">
-        <Contacto />
+        <div id="blackColor">
+          <section>
+            <Header />
+          </section>
+          <section>
+            <Portafolio />
+          </section>
+        </div>
+        <section>
+          <GrowingSphere />
+        </section>
+        <div id="amarilloColor" className="amarillocolor">
+        </div>
+          <section>
+            <ScrollSlider />
+          </section>
+          <section>
+            <Skills />
+          </section>
+          <section>
+            <SobreMi />
+          </section>
+          <section>
+            <Contacto />
+          </section>
       </div>
     </div>
   );
 }
 
 export default App;
-

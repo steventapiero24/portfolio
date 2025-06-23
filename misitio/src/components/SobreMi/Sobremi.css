@@ -4,7 +4,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 200vh;
+    min-height: 200vh;
     background-color: var(--color-amarillo);
 }
 
@@ -23,10 +23,10 @@
   
 
 .sobremi__container {
+    min-height: 100vh;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    height: 80%;
     padding: 80px;
     opacity: 1;
 }
@@ -50,7 +50,7 @@
     width: 50px;
 }
 .sobremi__container-title {
-    position: sticky;
+    position: relative;
     top: 10px;
     display: flex;
     align-items: center;

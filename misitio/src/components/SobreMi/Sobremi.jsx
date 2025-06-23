@@ -1,6 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import gsap from "gsap";
-import ScrollTrigger from "gsap/dist/ScrollTrigger";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollSmoother } from "gsap/ScrollSmoother";
+
 import "../SobreMi/Sobremi.css";
 import ImageComponent from "../ImageComponent";
 import steven from "../../assets/steven.webp";
@@ -9,7 +11,8 @@ import diseñador from "../../assets/diseñador.png";
 import aprendizajec from "../../assets/aprendizajec.png";
 import trabajar from "../../assets/trabajar.png";
 
-gsap.registerPlugin(ScrollTrigger);
+// Registra los plugins
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 const sobremi = [
   {
@@ -39,53 +42,53 @@ const sobremi = [
 ];
 
 const SobreMi = () => {
-  const [isFixed, setIsFixed] = useState(false);
-
   useEffect(() => {
-    // Animación de rotación con GSAP (esto sigue igual)
-    gsap.utils.toArray(".sobremi__container-info-icon-img").forEach((img, index) => {
-      gsap.to(img, {
-        rotate: 360, // Rota la imagen 360 grados
-        ease: "none",
-        scrollTrigger: {
-          trigger: img,
-          start: "top bottom",
-          end: "bottom top",
-          scrub: 2, // Se mueve a medida que scrolleas
-        },
-        delay: index * 0.2, // Aplica un pequeño retraso por imagen
-      });
+    const interval = setInterval(() => {
+      const smoother = ScrollSmoother.get();
+      if (!smoother) return;
+
+      // Pin a la sección del título
+     ScrollTrigger.create({
+      trigger: ".sobremi__container-title",
+      start: "top top",
+      end: "+=1000", // duración más generosa
+      pin: true,
+      scrub: true,
+      pinSpacing: true, // deja espacio debajo para evitar cortes
+      anticipatePin: 1,
     });
-  
-    // Sticky Section solo en escritorio
-    if (window.innerWidth > 768) { // Solo en pantallas mayores a 768px
-      const section = document.getElementById("sticky-section");
-  
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              setIsFixed(true);
-              setTimeout(() => setIsFixed(false), 2000);
-            }
+
+
+      // Animación de íconos giratorios
+      gsap.utils
+        .toArray(".sobremi__container-info-icon-img")
+        .forEach((img, index) => {
+          gsap.to(img, {
+            rotate: 360,
+            ease: "none",
+            scrollTrigger: {
+              trigger: img,
+              start: "top bottom",
+              end: "bottom top",
+              scrub: 2,
+            },
+            delay: index * 0.2,
           });
-        },
-        { threshold: 1 }
-      );
-  
-      if (section) observer.observe(section);
-  
-      return () => {
-        if (section) observer.unobserve(section);
-      };
-    }
+        });
+
+      clearInterval(interval); // Detener polling
+    }, 100);
+
+    return () => {
+      clearInterval(interval);
+      ScrollTrigger.getAll().forEach((t) => t.kill());
+    };
   }, []);
-  
 
   return (
     <div className="sobremi" id="sobremi">
       <div className="sobremi__container">
-        <div className={`sobremi__container-title section ${isFixed ? "fixed" : ""}`}>
+        <div className="sobremi__container-title section">
           <h2>
             CONOCE <span> UN <br /> POCO </span> <br />
             SOBRE MI
@@ -95,10 +98,14 @@ const SobreMi = () => {
           </div>
         </div>
         <div className="sobremi__container-items">
-          {sobremi.map(({ id, title, description, imageUrl }, index) => (
+          {sobremi.map(({ id, title, description, imageUrl }) => (
             <div key={id} className="sobremi__container-info">
               <div className="sobremi__container-info-icon">
-                <img className="sobremi__container-info-icon-img" src={imageUrl} alt={title} />
+                <img
+                  className="sobremi__container-info-icon-img"
+                  src={imageUrl}
+                  alt={title}
+                />
               </div>
               <div className="sobremi__container-info-description">
                 <h5>{title}</h5>
