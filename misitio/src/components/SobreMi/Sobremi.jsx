@@ -42,48 +42,47 @@ const sobremi = [
 ];
 
 const SobreMi = () => {
-  useEffect(() => {
-    const interval = setInterval(() => {
-      const smoother = ScrollSmoother.get();
-      if (!smoother) return;
+ useEffect(() => {
+  const checkSmoother = setInterval(() => {
+    const smoother = gsap.core.globals().ScrollSmoother?.get();
+    if (!smoother) return;
 
-      // Pin a la sección del título
-     ScrollTrigger.create({
+    ScrollTrigger.create({
       trigger: ".sobremi__container-title",
       start: "top top",
-      end: "+=1000", // duración más generosa
+      end: "+=700",
       pin: true,
       scrub: true,
-      pinSpacing: true, // deja espacio debajo para evitar cortes
+      pinSpacing: true,
       anticipatePin: 1,
     });
 
+    gsap.utils.toArray(".sobremi__container-info-icon-img").forEach((img, index) => {
+      gsap.to(img, {
+        rotate: 360,
+        ease: "none",
+        scrollTrigger: {
+          trigger: img,
+          start: "top bottom",
+          end: "bottom top",
+          scrub: 2,
+        },
+        delay: index * 0.2,
+      });
+    });
 
-      // Animación de íconos giratorios
-      gsap.utils
-        .toArray(".sobremi__container-info-icon-img")
-        .forEach((img, index) => {
-          gsap.to(img, {
-            rotate: 360,
-            ease: "none",
-            scrollTrigger: {
-              trigger: img,
-              start: "top bottom",
-              end: "bottom top",
-              scrub: 2,
-            },
-            delay: index * 0.2,
-          });
-        });
+    clearInterval(checkSmoother);
+  }, 100);
 
-      clearInterval(interval); // Detener polling
-    }, 100);
+  return () => {
+    clearInterval(checkSmoother);
+    // Limpiamos SOLO los scrolltrigger de esta sección
+    ScrollTrigger.getAll()
+      .filter(t => t.trigger && t.trigger.closest('.sobremi'))
+      .forEach(t => t.kill());
+  };
+}, []);
 
-    return () => {
-      clearInterval(interval);
-      ScrollTrigger.getAll().forEach((t) => t.kill());
-    };
-  }, []);
 
   return (
     <div className="sobremi" id="sobremi">
