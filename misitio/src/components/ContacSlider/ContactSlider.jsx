@@ -14,9 +14,9 @@ const ContactSlider = () => {
 
     gsap.fromTo(
       textWrapperRef.current,
-      { x: "-10%" }, 
+      { x: "0%" }, 
       {
-        x: "10%", 
+        x: "-20%", 
         ease: "none",
         duration: 1,
         scrollTrigger: {
@@ -31,7 +31,7 @@ const ContactSlider = () => {
   }, []);
 
   return (
-    <section className="demo-text">
+    <section className="demo-text-contact">
       <div className="wrapper text" ref={textWrapperRef}>
         Contacto 
         <LensIcon sx={{ fontSize: 30 }}/>

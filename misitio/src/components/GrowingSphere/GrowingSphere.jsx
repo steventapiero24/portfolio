@@ -21,7 +21,7 @@ const GrowingSphere = () => {
           start: "top center",
           end: "bottom top",
           scrub: true,
-          markers: true,
+          markers: false,
         },
       }
     );

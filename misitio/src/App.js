@@ -52,8 +52,8 @@ function App() {
 
   return (
     <div id="smooth-wrapper">
-      <div id="smooth-content" className="App">
         <Customcursor />
+      <div id="smooth-content" className="App">
         <Nav />
 
         <div id="blackColor">
@@ -64,7 +64,7 @@ function App() {
             <Portafolio />
           </section>
         </div>
-        <section>
+        <section className="amarillocolor">
           <GrowingSphere />
         </section>
         <div id="amarilloColor" className="amarillocolor">

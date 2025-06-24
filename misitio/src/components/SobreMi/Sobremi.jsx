@@ -42,20 +42,23 @@ const sobremi = [
 ];
 
 const SobreMi = () => {
- useEffect(() => {
+useEffect(() => {
+  // Función para saber si estamos en escritorio o tablet
+  const isDesktopOrTablet = window.innerWidth > 768;
+
   const checkSmoother = setInterval(() => {
     const smoother = gsap.core.globals().ScrollSmoother?.get();
     if (!smoother) return;
 
-    ScrollTrigger.create({
-      trigger: ".sobremi__container-title",
-      start: "top top",
-      end: "+=700",
-      pin: true,
-      scrub: true,
-      pinSpacing: true,
-      anticipatePin: 1,
-    });
+    if (isDesktopOrTablet) {
+      ScrollTrigger.create({
+        trigger: ".sobremi__container_fixed",
+        pin: true,
+        start: "top top",
+        end: "+=700",
+        scrub: 2,
+      });
+    }
 
     gsap.utils.toArray(".sobremi__container-info-icon-img").forEach((img, index) => {
       gsap.to(img, {
@@ -76,7 +79,6 @@ const SobreMi = () => {
 
   return () => {
     clearInterval(checkSmoother);
-    // Limpiamos SOLO los scrolltrigger de esta sección
     ScrollTrigger.getAll()
       .filter(t => t.trigger && t.trigger.closest('.sobremi'))
       .forEach(t => t.kill());
@@ -86,7 +88,7 @@ const SobreMi = () => {
 
   return (
     <div className="sobremi" id="sobremi">
-      <div className="sobremi__container">
+      <div className="sobremi__container_fixed">
         <div className="sobremi__container-title section">
           <h2>
             CONOCE <span> UN <br /> POCO </span> <br />
@@ -96,6 +98,8 @@ const SobreMi = () => {
             <ImageComponent src={steven} alt="Steven" />
           </div>
         </div>
+      </div>
+      <div className="sobremi__container">
         <div className="sobremi__container-items">
           {sobremi.map(({ id, title, description, imageUrl }) => (
             <div key={id} className="sobremi__container-info">

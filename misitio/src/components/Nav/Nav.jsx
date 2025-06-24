@@ -14,11 +14,6 @@ const Nav = () => {
       <div className="nav">
         <nav className="menu">
             <ul>
-                <li><a href="#header">Inicio</a></li>
-                <li><a href="#projectos">Proyectos</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#sobremi">Sobre mi</a></li>
-                <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
       </div>

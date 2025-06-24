@@ -10,8 +10,8 @@
 * {
     padding: 0;
     margin: 0;
-     scroll-behavior: smooth;
     font-family: 'Clash Display', sans-serif;
+    cursor: none;
 }
 
 /* Estilo para la barra de desplazamiento */
@@ -90,5 +90,5 @@ body {
 }
 
 .amarillocolor {
-  height: 50%;
+  height: 5vh;
 }

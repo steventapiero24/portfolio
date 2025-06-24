@@ -12,7 +12,7 @@
   z-index: 10000;
   width: 10px;
   height: 10px;
-  background-color: var(--color-amarillo);
+  background-color: var(--color-principal);
   transition: transform 0.2s cubic-bezier(0.25, 1, 0.5, 1);
 }
 

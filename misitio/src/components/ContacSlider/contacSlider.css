@@ -1,8 +1,10 @@
-.demo-text {
+.demo-text-contact {
+  position: relative;
     overflow: hidden;
     height: 200px;
     display: flex;
     align-items: center;
+    height: 30vh;
   }
   
   .wrapper.text {
@@ -22,5 +24,8 @@
   @media (max-width: 450px) {
     .wrapper.text {
       max-width:400px;
+    }
+    .demo-text-contact {
+      height: 10vh;
     }
   }
