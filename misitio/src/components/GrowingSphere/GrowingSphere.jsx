@@ -27,7 +27,10 @@ const GrowingSphere = () => {
     );
   }, []);
 
-  return <div className="growing-sphere" ref={sphereRef}></div>;
+  return 
+    <div className="contenedor__esfera">
+      <div className="growing-sphere" ref={sphereRef}></div>;
+    </div>
 };
 
 export default GrowingSphere;

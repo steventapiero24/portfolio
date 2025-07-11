@@ -1,5 +1,6 @@
 import React from 'react'
 import Isotipo from '../../assets/isotipo.webp';
+import ArrowRightAltOutlinedIcon from '@mui/icons-material/ArrowRightAltOutlined';
 import "../Nav/Nav.css";
 
 const Nav = () => {
@@ -18,8 +19,11 @@ const Nav = () => {
         </nav>
       </div>
       <div className="menu">
-        <a href='./Hoja de vidaStevenT.pdf' download={''}>
-          Descargar hv
+        <a href='./Hoja de vidaStevenT.pdf' download={''} className='button__hv'>
+          <ArrowRightAltOutlinedIcon/> 
+          <span>
+            Descargar hv
+          </span>
         </a>
       </div>
 

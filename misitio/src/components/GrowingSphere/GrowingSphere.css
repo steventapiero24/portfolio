@@ -10,3 +10,9 @@
   z-index: 100;
   pointer-events: none;
 }
+
+.contenedor__esfera {
+  z-index: 100;
+  position: sticky;
+  height: 10%;
+}

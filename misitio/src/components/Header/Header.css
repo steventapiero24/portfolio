@@ -27,7 +27,7 @@
 }
 
 .header-titulo p {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 100;
   text-align: right;
   margin-bottom: 4rem;
@@ -42,7 +42,7 @@
 }
 
 .header-titulo__container p {
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: var(--color-white);
   font-weight: 300;
   line-height: normal;

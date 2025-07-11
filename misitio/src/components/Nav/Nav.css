@@ -38,6 +38,13 @@
     font-size: 1rem;
 }
 
+.button__hv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
 @media (max-width: 1250px) {
     .image-container img {
         height: 3rem;
@@ -50,7 +57,6 @@
     font-size: 1.2rem;
     font-weight: 400;
     transition: .3s ease;
-    display: inline-block;
     font-family: 'Clash Display', sans-serif;
     cursor: pointer;
 }
