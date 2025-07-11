@@ -16,7 +16,7 @@
 .section-button {
     display: flex;
     padding: 0 30px;
-    height: 20vh;
+    height: 10vh;
     justify-content: center;
     align-items: center;
 }
@@ -131,7 +131,7 @@
 .img--1 {
     transform: translate(80px, 40px);
     &:hover::after {
-        background-color: var(--color-amarillo);
+        background-color: var(--color-amarillo-rgba);
     }
 }
 .img--2 {

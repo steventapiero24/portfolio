@@ -145,7 +145,7 @@ const Portafolio = () => {
         )}
       </section>
       <div className="section-button">
-        <button> Ver mas proyectos </button>
+        <button className="button btn_outline"> Ver mas proyectos </button>
       </div>
     </div>
   );

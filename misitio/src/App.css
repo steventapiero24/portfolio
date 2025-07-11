@@ -3,6 +3,7 @@
     --color-segundario: #011F50;
     --color-texto:#111111;
     --color-amarillo:#FFE5B6;
+    --color-amarillo-rgba:#ffe5b6c7;
     --color-amarilo-rgba: #f8998a;
     --color-white: #FFFFFF;
 }
@@ -38,7 +39,7 @@
   
 /* Estilos botones */
 button {
-    padding: 5px 18px !important;
+    padding: 8px 15px !important;
     border: none !important;
     font-size: 1.2rem !important;
     font-weight: 500 !important;
@@ -53,6 +54,17 @@ button {
     &:hover {
         background-color: var(--color-principal) !important;
         color: var(--color-amarillo) !important;
+      }
+    }
+    .button.btn_outline {
+      border: 1px solid var(--color-amarillo) !important;
+      padding: 8px 12px !important;
+      border-radius: 8px !important;
+      background-color: transparent !important;
+      &:hover {
+      color: var(--color-principal) !important;
+      border: 1px solid var(--color-principal) !important;
+      background-color: transparent !important;
     }
 }
 .contact__container-info-form button {
