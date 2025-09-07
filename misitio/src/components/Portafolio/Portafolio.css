@@ -1,239 +1,99 @@
 .portafolio {
     position: relative;
-    padding: 0 9.5rem;
     background-color: var(--color-texto);
-    height: 100vh;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: aliceblue;
 }
 
 .section {
-    display: flex;
-    height: auto;
-    margin: 0 auto;
-    gap: 0;
-    padding: 0 30px;
-    height: 80vh;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    row-gap: 92px;
+    width: 80%;
 }
+
 .section-button {
     display: flex;
-    padding: 0 30px;
-    height: 10vh;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    height: 300px;
 }
-.section-one {
-    height: 25vh;
-}
-.gallery {
-    height: 100vh;
-}
-.line {
-    border-right: 1px solid transparent;
-}
-.img {
-    width: 100%;
-    height: 600px;
-    position: relative;
-    background-size: cover;
-    background-position: center;
-    z-index: 1;
-    transition: .8s ease;
-    border-radius: 20px;
-    &:after {
-        content: '';
-        border-radius: 20px;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        transition: background-color 0.3s ease;
-        z-index: 2;
-    }
 
-    &:hover::after {
-        background-color: rgba(241, 241, 241, 0.76);
-    }
-}
-.img:hover {
-    opacity: 0.8;
-    transform: translateY(-10px);
-}
-.img__info {
-    background-color: var(--color-amarillo);
+.portafolio__titulo  {
+    font-size: 7rem;
+    display: flex;
     flex-direction: column;
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translateX(-50%);
-    border-radius: 8px;
-    transition: .8s ease;
-    z-index: 10;
-    opacity: 0;
-    visibility: hidden;
+    width: 80%;
+    padding: 0 9rem;
 }
-.img:hover .img__info {
-    opacity: 1;
-    visibility: visible;
-}
-.img__info-tecnologias {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 16px;
-    font-family: 'Clash Display', sans-serif;
-}
-.img__info-tecnologias-header {
-    min-width: 200px;
-    width: fit-content;
-    background-color: var(--color-amarilo-rgba);
-    height: 30px;
-    border-radius: 6px 6px 0 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1rem;
-    font-weight: 600;
-    padding: 10px;
-    text-align: center;
-}
-.img__info-tecnologias-info span {
-    font-size: 1rem;
-    text-align: center;
+.portafolio__titulo  h2 {
     font-weight: 400;
-    color: var( --color-segundario);
-    padding: 12px 10px 5px 10px;
-    display: block;
+
 }
-.img__info-tecnologias-button {
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 0 5px 0;
-}
-.img__info-tecnologias-button a {
-    font-family: "Oswald", serif;
-    padding: 3px 8px;
-    border: none;
-    font-size: 1rem;
-    font-weight: 800;
-    border: 1px solid var(--color-segundario);
-    background-color: var(--color-principal);
-    cursor: pointer;
-    color: var(--color-texto);
-    transition: .3s ease;
-    &:hover {
-        background-color: var(--color-segundario);
-        color: var(--color-amarillo);
-    }
+.portafolio__titulo  h2:first-child{
+   text-align: right;
+
 }
 
-.img--1 {
-    transform: translate(80px, 40px);
-    &:hover::after {
-        background-color: var(--color-amarillo-rgba);
-    }
-}
-.img--2 {
-    transform: translate(20px, 0px);
-    &:hover::after {
-        background-color: var(--color-principal);
-    }
-}
-.img--3 {
-    transform: translate(-20px, 40px);
-    &:hover::after {
-        background-color: var(--color-segundario);
-    }
-}
-.img--4 {
-    transform: translate(-80px, 0px);
-    z-index: 2;
-}
-
-.section__buton {
+.portafolio__descipcion {
+    padding: 3rem 9rem;
     display: flex;
     justify-content: flex-end;
+    width: 80%;
+    height: 240px;
     align-items: center;
-    height: 100px;
-    padding: 0 30px;
 }
-.section__buton a {
-    text-decoration: none;
-    color: var(--color-texto);
-    font-size: 1.2rem;
-    font-weight: 500;
-    transition: .3sease;
+.portafolio__descipcion span {
+    width: 750px;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.container__portfolio {    
+    min-height: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.portfolio__info {
     display: flex;
     align-items: center;
-    gap: 8px;
-    padding-right: 100px;
-}
-.section__buton a:hover{
-    color: var(--color-principal);
-}
-
-.section__buton svg {
-    transform: translateY(2px);
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 400px;
+    border-radius: 2rem;
 }
 
-.css-ub0h6r {
-    width: 600px !important;
+.portfolio__info-tecnologias-header {
+    font-size: 28px;
+    font-weight: 500;
+}
+.portfolio__info-tecnologias-description {
+    font-weight: 100;
+    font-size: 18;
 }
 
-@media (max-width: 1250px) {
-
-    .portafolio {
-        position: relative;
-        padding: 0 2rem;
-        background-color: var(--color-texto);
-        gap: 20px;
-        height: auto;
-    }
-    .css-ub0h6r {
-        width: 350px !important;
-    }
-    .section {
-        display: flex;
-        flex-direction: column;
-        height: auto;
-        gap: 60px;
-        margin: 0 auto;
-    }
-    .img {
-        height: 300px;
-        margin-bottom: 9.5rem;
-    }
-    .img__info {
-        visibility: visible;
-        opacity: 100;
-        position: relative;
-        top: 101%;    }
-    .img__info-tecnologias-info {
-        width: 100%;
-    }
-    .img__info-tecnologias-info span {
-        height: 45px;
-    }
-    .img--1, .img--2, .img--3, .img--4 {
-        transform: translate(0px ,0px) !important;
-    }
-    .img__info-tecnologias-header {
-        min-width: 286px;
-    }
-    .sobremi__container-title h2, .sobremi__container-title span {
-        font-size: 52px;
-    }
-    .img {
-    &:after {
-        content: '';
-    }
-
-    &:hover::after {
-        background-color: transparent;
-    }
+.portafolio__img {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 450px;
 }
+.btn__portafolio {
+    width: 265px;
 }
+
+
+
+
+
 
 /* Modal */
 .customModal__container {
@@ -251,13 +111,13 @@
 }
 .customModal__label {
     text-align: left;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 700;
     color: var(--color-texto);
 }
 .customModal__description {
     text-align: left;
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 400;
     line-height: normal;
     color: var(--color-texto);

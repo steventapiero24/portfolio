@@ -57,6 +57,8 @@ button {
       }
     }
     .button.btn_outline {
+      display: flex;
+      gap: 8px;
       border: 1px solid var(--color-amarillo) !important;
       padding: 8px 12px !important;
       border-radius: 8px !important;
@@ -103,4 +105,11 @@ body {
 
 .amarillocolor {
   height: 5vh;
+}
+
+/* Modales  */
+
+.css-ub0h6r,
+.css-ub0h6r * {
+    cursor: auto !important;
 }

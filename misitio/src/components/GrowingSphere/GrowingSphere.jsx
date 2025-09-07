@@ -12,7 +12,7 @@ const GrowingSphere = () => {
   useEffect(() => {
     gsap.fromTo(
       sphereRef.current,
-      { scale: 1 },
+      { scale: 0.5 },
       {
         scale: 70,
         ease: "power2.out",
@@ -27,10 +27,11 @@ const GrowingSphere = () => {
     );
   }, []);
 
-  return 
+  return (
     <div className="contenedor__esfera">
-      <div className="growing-sphere" ref={sphereRef}></div>;
+      <div className="growing-sphere" ref={sphereRef}></div>
     </div>
+  );
 };
 
 export default GrowingSphere;

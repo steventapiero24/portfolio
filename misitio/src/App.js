@@ -12,7 +12,6 @@ import ScrollSlider from "./components/ScrollSlider/ScrollSlider";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollSmoother } from "gsap/ScrollSmoother";
-import GrowingSphere from "./components/GrowingSphere/GrowingSphere";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
@@ -55,7 +54,6 @@ function App() {
         <Customcursor />
       <div id="smooth-content" className="App">
         <Nav />
-
         <div id="blackColor">
           <section>
             <Header />
@@ -65,7 +63,6 @@ function App() {
           </section>
         </div>
         <section className="amarillocolor">
-          <GrowingSphere />
         </section>
         <div id="amarilloColor" className="amarillocolor">
         </div>

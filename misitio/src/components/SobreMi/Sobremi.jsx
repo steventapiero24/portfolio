@@ -39,6 +39,12 @@ const sobremi = [
     description: "Me encanta colaborar y aprender de otros",
     imageUrl: trabajar,
   },
+  {
+    id: 5,
+    title: "Trabajar en equipo",
+    description: "Me encanta colaborar y aprender de otros",
+    imageUrl: trabajar,
+  },
 ];
 
 const SobreMi = () => {
@@ -55,7 +61,7 @@ useEffect(() => {
         trigger: ".sobremi__container_fixed",
         pin: true,
         start: "top top",
-        end: "+=700",
+        end: "+=900",
         scrub: 2,
       });
     }
@@ -89,7 +95,7 @@ useEffect(() => {
   return (
     <div className="sobremi" id="sobremi">
       <div className="sobremi__container_fixed">
-        <div className="sobremi__container-title section">
+        <div className="sobremi__container-title">
           <h2>
             CONOCE <span> UN <br /> POCO </span> <br />
             SOBRE MI

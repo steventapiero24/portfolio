@@ -1,18 +1,18 @@
 .growing-sphere {
-  position: sticky;
+  position: absolute;
   top: 10%;
   left: 50%;
   width: 40px;
   height: 40px;
   background-color: var(--color-amarillo);
   border-radius: 50%;
-  transform: translate(-50%, -50%) scale(1);
+  transform: translate(0%, -20%) scale(1);
   z-index: 100;
   pointer-events: none;
 }
 
 .contenedor__esfera {
   z-index: 100;
-  position: sticky;
+  position: relative;
   height: 10%;
 }

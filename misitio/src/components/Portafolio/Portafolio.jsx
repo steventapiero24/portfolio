@@ -1,9 +1,12 @@
 import { Button } from "@mui/material";
-import CustomModal from "../CunstomModal";
+import CustomModal from "../CunstomModal.jsx";
 import futuroValor from "../../assets/futuro-valor.webp";
 import idbangular from "../../assets/idbangular.webp";
 import idsob from "../../assets/idsob.webp";
+import branding from "../../assets/branding.webp";
+import motion from "../../assets/motion.webp";
 import reactcartera from "../../assets/reactcartera.webp";
+import GrowingSphere from "../../components/GrowingSphere/GrowingSphere";
 import "../Portafolio/Portafolio.css";
 import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
@@ -12,46 +15,12 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
-  {
-    id: 1,
-    image: idbangular,
-    title: "Banco interamericano de desarrollo",
-    technologies:
-      "Figma - Angular - Sass - Git - Gitlab - AngularUI - Prime Ng - Typescript",
-    team: "EEUU, Argentina, España",
-    habilidades:
-      "Figma, UxUi, UIkit, Metodologias agiles, Angular, Angular UI, Prime NG, bitbucket, canvan, Sass, Git, Gitub",
-    description: "Participé en el desarrollo de un sistema bancario basado en un panel de control integral, diseñado para administradores de préstamos. Este panel incluía tablas dinámicas, indicadores clave, informes automatizados, cálculo de cifras financieras y múltiples estados en cada componente, permitiendo la gestión eficiente de créditos y la generación de informes anuales sobre el portafolio crediticio. Mi rol se centró en el prototipado y la definición del Design System, aplicando la metodología Atomic Design para estructurar pantallas, componentes y microcomponentes de manera modular y escalable. Posteriormente, llevé estos diseños a la maquetación en Angular, creando los componentes iniciales del proyecto para que el equipo de desarrollo frontend integrara la lógica necesaria. Para garantizar escalabilidad y mantenimiento eficiente, se emplearon bibliotecas especializadas de Angular Material y otras herramientas del ecosistema. Esta metodología permitió optimizar el desarrollo, asegurando una interfaz consistente y una experiencia de usuario fluida y para todo el tema de estilos utilice Sass, implementando variables, ng class, estilos aisaldos y generales dependiendo el componente a trabajar",
-  },
-  {
-    id: 2,
-    image: reactcartera,
-    title: "Cartera inteligente Banco Interamericano",
-    technologies: "Figma - React - Sass - ReactUI - Css",
-    team: "EEUU, España",
-    habilidades:
-      "Figma, UIkit, Metodologias agiles, React, React UI, bitbucket, Sass, Git, Gitub",
-    description: "Participé en el desarrollo de un portal de cartera bancaria, un proyecto clave en mi primer contacto con React y la biblioteca Material UI. El objetivo principal era crear una interfaz altamente visual, intuitiva y fácil de entender, priorizando la claridad en la presentación de datos a través de gráficos, indicadores y una experiencia de usuario limpia y amigable. Mi rol se enfocó en la maquetación de componentes en React, utilizando Material UI para garantizar un diseño cohesivo y escalable. Diseñé y estructuré diversos elementos como gráficos interactivos, indicadores clave, tablas dinámicas y submenús, asegurando una experiencia consistente y eficiente. En total, se desarrollaron más de 25 indicadores, cada uno con su propio conjunto de componentes optimizados para la visualización de datos financieros. Este enfoque modular permitió construir una interfaz flexible y de fácil mantenimiento, mejorando la accesibilidad y usabilidad del portal. Para todo el tema de estilos utilice Sass, esto me permitio tener todo super organizado y facil de mantener",
-  },
-  {
-    id: 3,
-    image: idsob,
-    title: "España Instituto de ciberseguridad",
-    technologies:
-      "Figma, UIkit, Angular - Sass - Git - Gitlab - PrimeNg - Figma",
-    team: "España",
-    habilidades: "Angular, Prime NG, Sass, Git, Gitlab",
-    description: "Participé en el desarrollo de un sistema de autenticación basado en credenciales QR, diseñado para mejorar la seguridad y facilitar el acceso de los usuarios. La solución permitía gestionar credenciales mediante tokens únicos, garantizando que cada cliente tuviera un acceso exclusivo y seguro. Para ello, se desarrollaron dos interfaces: un panel de control para el cliente y un panel de usuario, adaptados a sus respectivas necesidades.Este proyecto, con una duración de cuatro meses, involucró una profunda fase de investigación, diseño UX/UI y múltiples iteraciones, debido a su naturaleza experimental. Se mantuvo una comunicación constante con el cliente final, lo que llevó a múltiples ajustes y mejoras a lo largo del desarrollo. Mi rol se centró en la creación del prototipo y el Design System, transformando los requerimientos y conversaciones con el cliente en una interfaz gráfica intuitiva, accesible y visualmente elegante. Posteriormente, llevé estos diseños a la maquetación en Angular, utilizando PrimeNG para los componentes y Sass para la personalización y optimización de estilos.",
-  },
-  {
-    id: 4,
-    image: futuroValor,
-    title: "Futuro valor",
-    technologies: "Wordpress - Elementor pro - Js - Css - Figma",
-    team: "Colombia",
-    habilidades: "Wordpress, Elementor, css, Gsap",
-    description: "Sitio web desarrollado para Futuro Valor, una empresa colombiana especializada en consultoría financiera y educación digital.El proyecto abarcó todo el proceso: desde el diseño visual y la definición del flujo de navegación, pasando por la investigación y prototipado, hasta su implementación en WordPress utilizando Elementor. Esta solución permite al equipo de la empresa administrar fácilmente el contenido y mantener el sitio actualizado de forma autónoma.",
-  },
+  { id: 1, image: idbangular, title: "Banco interamericano de desarrollo", technologies: "Figma - Angular - Sass - Git - Gitlab - AngularUI - Prime Ng - Typescript", team: "EEUU, Argentina, España", habilidades: "Figma, UxUi, UIkit, Metodologias agiles, Angular, Angular UI, Prime NG, bitbucket, canvan, Sass, Git, Gitub", description: "Participé en el desarrollo de un sistema bancario..." },
+  { id: 2, image: reactcartera, title: "Cartera inteligente Banco Interamericano", technologies: "Figma - React - Sass - ReactUI - Css", team: "EEUU, España", habilidades: "Figma, UIkit, Metodologias agiles, React, React UI, bitbucket, Sass, Git, Gitub", description: "Participé en el desarrollo de un portal de cartera bancaria..." },
+  { id: 3, image: idsob, title: "España Instituto de ciberseguridad", technologies: "Figma, UIkit, Angular - Sass - Git - Gitlab - PrimeNg - Figma", team: "España", habilidades: "Angular, Prime NG, Sass, Git, Gitlab", description: "Participé en el desarrollo de un sistema de autenticación basado en credenciales QR..." },
+  { id: 4, image: futuroValor, title: "Futuro valor", technologies: "Wordpress - Elementor pro - Js - Css - Figma", team: "Colombia", habilidades: "Wordpress, Elementor, css, Gsap", description: "Sitio web desarrollado para Futuro Valor..." },
+  { id: 5, image: branding, title: "Branding", technologies: "Illustrator - Photopshop - Figma", team: "Colombia", habilidades: "Illustrator - Photopshop - Figma", description: "  Revisa todos mis trabajo en Behance" },
+  { id: 6, image: motion, title: "Motion design", technologies: "After effects - Photoshop - Illustrator - Cinema 4D - Adobe Premier", team: "Colombia", habilidades: "After effects - Photoshop - Illustrator - Cinema 4D - Adobe Premier", description: "Revisa todos mis trabajo en Behance" },
 ];
 
 const Portafolio = () => {
@@ -59,93 +28,109 @@ const Portafolio = () => {
   const handleOpen = (modalId) => setOpenModal(modalId);
   const handleClose = () => setOpenModal(null);
 
-  // Crear un array de referencias para las imágenes
   const imgRefs = useRef([]);
 
+  // Preload de imágenes
+  const preloadImages = (images) =>
+    Promise.all(
+      images.map(
+        (src) =>
+          new Promise((resolve) => {
+            const img = new Image();
+            img.src = src;
+            img.onload = resolve;
+          })
+      )
+    );
+
   useEffect(() => {
-    if (window.innerWidth > 768) { // Solo en escritorio
-      imgRefs.current.forEach((img, index) => {
+    preloadImages(projects.map(p => p.image)).then(() => {
+      // Animaciones GSAP una vez cargadas las imágenes
+      imgRefs.current.forEach((img) => {
         gsap.fromTo(
           img,
           { opacity: 0, y: 50 },
           {
             opacity: 1,
-            y: index % 2 === 0 ? 50 : 0,
-            duration: 0.5,
+            y: 0,
+            duration: 0.8,
             scrollTrigger: {
               trigger: img,
-              start: "top 80%",
-              markers: false,
+              start: "top 85%",
+              end: "bottom 20%",
+              scrub: true,
             },
           }
         );
       });
-    }
+    });
   }, []);
-  
-  
 
   return (
     <div className="portafolio" id="projectos">
+      <div className="portafolio__titulo">
+        <h2>Algunos de</h2>
+        <h2> mis proyectos</h2>
+      </div>
+      <div className="portafolio__descipcion">
+        <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry...</span>
+      </div>
       <section className="section">
-        {projects.map(
-          (
-            { id, image, title, technologies, description, team, habilidades },
-            index
-          ) => (
+        {projects.map(({ id, image, title, technologies, description, team, habilidades }, index) => (
+          <div key={id} className="container__portfolio">
             <div
-              key={id}
-              className={`img img--${index + 1}`}
-              style={{ backgroundImage: `url(${image})` }}
-              ref={(el) => (imgRefs.current[index] = el)} // Asignar la referencia a cada imagen
-            >
-              <div className="img__info">
-                <div className="img__info-tecnologias">
-                  <div className="img__info-tecnologias-info">
-                    <div className="img__info-tecnologias-header">{title}</div>
-                    <span>{technologies}</span>
-                  </div>
-                </div>
-                <div className="img__info-tecnologias-button">
-                  <Button
-                    variant="contained"
-                    onClick={() => handleOpen(id)}
-                    sx={{ m: 1 }}
-                  >
-                    Ver Proyecto
-                  </Button>
-                </div>
-                <CustomModal
-                  open={openModal === id}
-                  handleClose={handleClose}
-                  title={title}
-                >
-                  <div className="customModal__container">
-                    <h3 className="customModal__label">Team</h3>
-                    <p className="customModal__description">{team}</p>
-                  </div>
-                  <div className="customModal__container">
-                    <h3 className="customModal__label">Descripcion</h3>
-                    <p className="customModal__description">{description}</p>
-                    {id === 4 && (
-                      <div className="customModal__container-button">
-                        <a href="https://futurovalor.com/"> Ir al repositorio </a>
-                        <a target="_blank" rel="noreferrer" href="https://futurovalor.com/" > Ver en vivo </a>
-                      </div>  
-                    )}
-                  </div>
-                  <div className="customModal__container">
-                    <h3 className="customModal__label">Habilidades</h3>
-                    <p className="customModal__description">{habilidades}</p>
-                  </div>
-                </CustomModal>
+              className={`portfolio__info portafolio__img img--${index + 1}`}
+              ref={(el) => (imgRefs.current[index] = el)}
+              style={{
+                minHeight: "300px", // evita tirones iniciales
+                backgroundImage: `url(${image})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                willChange: "transform, opacity",
+              }}
+            ></div>
+
+            <div className="img__info-tecnologias">
+              <div className="img__info-tecnologias-info">
+                <div className="portfolio__info-tecnologias-header">{title}</div>
+                <span className="portfolio__info-tecnologias-description">{technologies}</span>
               </div>
             </div>
-          )
-        )}
+            <div className="img__info-tecnologias-button">
+              <Button variant="contained" onClick={() => handleOpen(id)} sx={{ m: 1 }}>
+                Ver Proyecto
+              </Button>
+            </div>
+            <CustomModal open={openModal === id} handleClose={handleClose} title={title}>
+              <div className="customModal__container">
+                <h3 className="customModal__label">Team</h3>
+                <p className="customModal__description">{team}</p>
+              </div>
+              <div className="customModal__container">
+                <h3 className="customModal__label">Descripcion</h3>
+                <p className="customModal__description">{description}</p>
+                {id === 4 && (
+                  <div className="customModal__container-button">
+                    <a href="https://futurovalor.com/"> Ir al repositorio </a>
+                    <a target="_blank" rel="noreferrer" href="https://futurovalor.com/">
+                      Ver en vivo
+                    </a>
+                  </div>
+                )}
+              </div>
+              <div className="customModal__container">
+                <h3 className="customModal__label">Habilidades</h3>
+                <p className="customModal__description">{habilidades}</p>
+              </div>
+            </CustomModal>
+          </div>
+        ))}
       </section>
       <div className="section-button">
-        <button className="button btn_outline"> Ver mas proyectos </button>
+        <button className="button btn_outline btn__portafolio">
+          <span>Ver mas proyectos</span>
+          <GrowingSphere />
+        </button>
       </div>
     </div>
   );

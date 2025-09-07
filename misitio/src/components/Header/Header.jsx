@@ -40,7 +40,7 @@ const Header = () => {
     <div className="header" id="header">
       <div className="container-header">
         <div className="header-titulo">
-          <p ref={parrafoRef}>Diseñador UI Frontend | UX | maquetación en Angular & React | UI Kits</p>
+          <p ref={parrafoRef}>Diseñador UI Frontend | UX | UI Kits</p>
           <span ref={spanRef}>Bienvenido al sitio web de</span>
           <h3 ref={tituloRef} >Steven Tapiero</h3>
         </div>

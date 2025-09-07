@@ -1,9 +1,11 @@
 .contact {
+    position: relative;
     display: flex;
     height: 100vh;
     flex-direction: column;
     width: 100%;
     overflow-x: hidden;
+    z-index: 2000;
 }
 .contact__container {
     padding: 5px 100px 20px 100px;
