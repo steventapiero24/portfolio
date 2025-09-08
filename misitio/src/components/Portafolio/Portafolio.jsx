@@ -73,7 +73,8 @@ const Portafolio = () => {
         <h2> mis proyectos</h2>
       </div>
       <div className="portafolio__descipcion">
-        <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry...</span>
+        <span>Trabajos cuidadosamente diseñados con pasión,
+        enfocados en generar resultados y dejar huella.</span>
       </div>
       <section className="section">
         {projects.map(({ id, image, title, technologies, description, team, habilidades }, index) => (
@@ -115,6 +116,16 @@ const Portafolio = () => {
                     <a target="_blank" rel="noreferrer" href="https://futurovalor.com/">
                       Ver en vivo
                     </a>
+                  </div>
+                )}
+                {id === 5 && (
+                  <div className="customModal__container-button">
+                    <a target="_blank" rel="noreferrer" href="https://www.behance.net/gallery/226255251/Futuro-valor"> Ir a Behance </a>
+                  </div>
+                )}
+                {id === 6 && (
+                  <div className="customModal__container-button">
+                    <a target="_blank" rel="noreferrer" href="https://www.behance.net/steventapiero"> Ir a Behance </a>
                   </div>
                 )}
               </div>

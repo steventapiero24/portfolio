@@ -90,11 +90,6 @@
     width: 265px;
 }
 
-
-
-
-
-
 /* Modal */
 .customModal__container {
     display: flex;
@@ -135,7 +130,7 @@
     color: var(--color-texto);
     border-radius: 16px;
     text-decoration: none;
-    cursor: pointer;
+    cursor: pointer !important;
     transition: .3s ease;
     font-weight: 500;
     font-family: 'Clash Display', sans-serif

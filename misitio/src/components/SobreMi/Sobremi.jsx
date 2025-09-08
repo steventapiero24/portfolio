@@ -41,9 +41,9 @@ const sobremi = [
   },
   {
     id: 5,
-    title: "Trabajar en equipo",
-    description: "Me encanta colaborar y aprender de otros",
-    imageUrl: trabajar,
+    title: "Aprendizaje autodidacta",
+    description: "Siempre estoy en constante aprendizaje, nunca soy un no rotundo, siempre hay forma de hacer las cosas",
+    imageUrl: aprendizajec,
   },
 ];
 
